@@ -1,0 +1,11 @@
+--- pyorbited-0.1.1/pyorbited/event.py~	2007-06-27 21:39:50.000000000 +0200
++++ pyorbited-0.1.1/pyorbited/event.py	2008-01-30 21:38:42.686324197 +0100
+@@ -78,7 +78,7 @@
+ 
+ 
+     def render(self, connection):
+-        out  = "Orbit 1.0\r\nEvent\r\nid: %s\r\n" % self.id
++        out  = "Orbit/1.0\r\nEvent\r\nid: %s\r\n" % self.id
+         for recipient in self.requests[connection.id]:
+             out += "recipient: %s\r\n" % recipient
+         out += "length: %s\r\n\r\n" % len(self.data)
