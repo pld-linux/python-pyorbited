@@ -1,7 +1,8 @@
 
 %define		module pyorbited
 
-Summary:	A python client for the orbited (Orbit Event Daemon)
+Summary:	A Python client for the orbited (Orbit Event Daemon)
+Summary(pl.UTF-8):	Pythonowy klient demona zdarzeń orbited (Orbit Event Daemon)
 Name:		python-%{module}
 Version:	0.1.1
 Release:	1
@@ -16,26 +17,31 @@ BuildRequires:	python-devel >= 1:2.5
 BuildRequires:	python-modules
 BuildRequires:	python-setuptools
 BuildRequires:	rpm-pythonprov
-Suggests:	orbited
 %pyrequires_eq	python-libs
+Suggests:	orbited
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-A python client for the orbited (Orbit Event Daemon), a COMET server.
+A Python client for the orbited (Orbit Event Daemon), a COMET server.
 Includes three implementations: pyevent, twisted, basic sockets.
+
+%description -l pl.UTF-8
+Pythonowy klient demona zdarzeń orbited (Orbit Event Daemon), serwera
+COMET. Zawiera trzy implementacje: pyevent, twisted i opartą na
+zwykłych gniazdach.
 
 %prep
 %setup -q -n %{module}-%{version}
 %patch0 -p1
 
 %build
-python setup.py build_ext
+%{__python} setup.py build_ext
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-python setup.py install \
+%{__python} setup.py install \
 	--root=$RPM_BUILD_ROOT \
 	--optimize=2
 
