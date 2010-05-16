@@ -17,6 +17,7 @@ BuildRequires:	python-devel >= 1:2.5
 BuildRequires:	python-modules
 BuildRequires:	python-setuptools
 BuildRequires:	rpm-pythonprov
+BuildRequires:	unzip
 %pyrequires_eq	python-libs
 Suggests:	orbited
 BuildArch:	noarch
