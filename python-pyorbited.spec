@@ -5,7 +5,7 @@ Summary:	A Python client for the orbited (Orbit Event Daemon)
 Summary(pl.UTF-8):	Pythonowy klient demona zdarzeń orbited (Orbit Event Daemon)
 Name:		python-%{module}
 Version:	0.1.1
-Release:	2
+Release:	3
 License:	MIT
 Group:		Libraries/Python
 Source0:	http://pypi.python.org/packages/source/p/pyorbited/%{module}-%{version}.zip
