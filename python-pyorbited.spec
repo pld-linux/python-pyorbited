@@ -12,6 +12,7 @@ Source0:	http://pypi.python.org/packages/source/p/pyorbited/%{module}-%{version}
 # Source0-md5:	50779977e358601a7a19719fc9ace3a5
 Patch0:		%{name}-orbited03.patch
 URL:		http://brbx.com/orbited/index.html
+BuildRequires:	rpmbuild(macros) >= 1.710
 BuildRequires:	libevent-devel
 BuildRequires:	python-devel >= 1:2.5
 BuildRequires:	python-modules
